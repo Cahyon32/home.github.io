@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Belanja Online</title>
+
+    <!-- bootstrap 5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- css animasi -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- css sweetalert -->
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Lobster&display=swap" rel="stylesheet">
+
+<style type="text/css">
+  body {
+    background-color: #eff0f2;
+    font-family: 'Poppins',sans-serif;
+    height: 100vmax;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/email-pattern.png');
+    margin-bottom: 20px;
+  }
+  /*header*/
+  .header {
+    animation: slideInDown;
+    animation-duration: 1s;
+    padding: 7px 7px 3px 7px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eff0f2;
+    position: fixed;
+    z-index: 1;
+  }
+  .header h3{
+    font-family: 'league Spartan',sans-serif;
+    color: #000;
+    font-size: 5vmin;
+    font-weight: bold;
+  }
+  .header svg {
+    border: 1px solid #1db9ab;
+    padding: 3px;
+    border-radius: 3px;
+    animation: bounce;
+    animation-duration: 2s;
+  }
+  /*end header*/
+  
+  /*saldo*/
+  .viewsaldo {
+    padding-top: 50px;
+  }
+  .boxsaldo {
+    animation: slideInDown;
+    animation-duration: 1s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border : 1px solid #fff;
+    border-radius: 10px;
+    width: 98%;
+    margin: auto;
+    padding: 7px;
+    background-color: #510051;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/vintage-wallpaper.png');
+    background-size: cover;
+  }
+  .saldo p {
+    font-size: 3.5vmin;
+    color: #fff;
+  }
+  .saldo h2 {
+    font-family: 'league Spartan', sans-serif;
+    font-weight: bold;
+    font-size: 4.5vmin;
+    margin-top: -7px;
+    margin-bottom: -1px;
+    color: #fff;
+  }
+  .topup {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: -10px;
+  }
+  .topup a {
+    text-decoration: none;
+  }
+        .tombol {
+        border-radius: 20px;
+        width: 90px;
+        padding: 3px;
+        border: 1px solid #fff;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+      }
+      
+      .tombol:hover {
+        background-color: #ff9100;
+      }
+  .topup p{
+    font-size: 3.5vmin;
+    color: #fff;
+  }
+  /*end saldo*/
+
+
+  /*baner*/
+  .baner {
+    width: 100%;
+    margin-top: 10px;
+  }
+    .baner img{
+      width: 100%;
+      border-radius: 10px;
+      animation: zoomIn;
+      animation-duration: 1s;
+
+    }
+    /*end baner*/
+
+  /*menu transaksi*/
+  .trans {
+    animation: slideInUp;
+    animation-duration: 1.5s;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .trans h6 {
+    font-weight: bold;
+    font-size: 3vmin;
+    color: #000;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 5vmin;
+  }
+  .menu a {
+    width: 20vmin;
+    text-decoration: none;
+    color: #000;
+  }
+  .menu img {
+    width: 10vmin;
+  }
+  .menu p {
+    font-size: 2.4vmin;
+    margin-top: 2vmin;
+  }
+
+  /*hny*/
+  .cover {    
+        height: 30%;
+        text-align: center;
+        padding: 20px 0px 30px 0px;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      .cover h1 {
+        color: #000;
+        font-family: 'Lobster', cursive;
+        opacity: 0.8;
+      }
+      .countdown {
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+      }
+      .card {
+        width: 23%;
+        background-color: #2e469c;
+        opacity: 0.8;
+        padding: 10px 0px 0px 0px;
+      }
+      .card h1 {
+        color: #f8c58e;
+        opacity: 1;
+      }
+      .card p {
+        margin-bottom: 1px;
+        color: #fff;
+        font-family: 'Lobster', cursive;
+      }
+      .newyear {
+        display: none;
+        margin-top: 10px;
+      }
+      .newyear img {
+        width: 100%;
+        animation: fadeInDown;
+        animation-duration: 1s;
+        border-radius: 10px;
+      }
+</style>
+
+  </head>
+
+
+  <body>
+    <!-- header -->
+    <div class="container-fluid header">
+      <h3>Belanja Online</h3>
+
+<a href="https://bejojoyo.bukaolshop.site/akun/?page=chat">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+  <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg>
+</a>
+    </div>
+    <!-- end header -->
+
+    <!-- saldo -->
+    <div class="container-fluid viewsaldo">
+      <div class="boxsaldo">
+      <div class="saldo">
+        <p>Saldo</p>
+        <h2 id="saldo_user">Rp{{saldo_user}}</h2>
+      </div>
+      <div class="topup">
+        <a href="https://bejojoyo.bukaolshop.site/akun/?page=topup">
+        <div class="tombol">
+        ISI SALDO
+        </div>
+         </a>
+       </div>
+    </div>
+    </div>
+    <!-- end saldo -->
+
+
+    <!-- baner -->
+     <div id="countdown" class="container-fluid cover">
+      <div class="container boxcountdown">
+    <h1 id="thbaru">Menuju tahun baru 2023</h1>
+    <div class="countdown">
+
+      <div id="bHari" class="card">
+        <h1 id="tHari"></h1>
+        <p id="nhari">Hari</p>
+      </div>
+
+      <div id="bJam" class="card">
+        <h1 id="tJam"></h1>
+        <p id="njam">Jam</p>
+      </div>
+
+      <div id="bMenit" class="card">
+        <h1 id="tMenit"></h1>
+        <p id="nmenit">Menit</p>
+      </div>
+
+      <div id="bDetik" class="card">
+        <h1 id="tDetik"></h1>
+        <p id="ndetik">Detik</p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="newyear" class="container newyear">
+      <img src="https://i.ibb.co/TKMnYZ0/happy-new-year-2023-celebration-260nw-2166842371.jpg">
+    </div>
+      <!-- end baner -->
+
+
+    <!--menu transaksi-->
+    <div class="container-fluid">
+
+      <div class="container trans">
+        <h6>Top Up & Bayar Tagihan</h6>
+
+        
+<div class="menu">
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/160814">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/2586/2586488.png" class="img-fluid">
+  <p>Pulsa</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/161449">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/2179/2179646.png" class="img-fluid">
+  <p>Data</p>
+  </div>
+  </a>
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/162113">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/542/542750.png" class="img-fluid">
+  <p>PLN</p>
+  </div>
+  </a>
+  
+  <a href="https://bejojoyo.bukaolshop.site/digital/134732">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/4474/4474763.png" class="img-fluid">
+  <p>BPJS</p>
+  </div>
+  </a>
+
+  <a id="info" onclick="info()" href="#">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/3706/3706164.png" class="img-fluid">
+  <p>Telp & SMS</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/167863">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/3258/3258446.png" class="img-fluid">
+  <p>E-Wallet</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/146057">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/311/311660.png" class="img-fluid">
+  <p>TV Kabel</p>
+  </div>
+  </a>
+
+  <a id="info" onclick="info()" href="#">
+  <div>
+  <img src="https://cdn-icons-png.flaticon.com/512/2830/2830289.png" class="img-fluid">
+  <p>Bank</p>
+  </div>
+  </a>
+
+</div>
+<!--end menu transaksi-->
+      </div>
+      
+    </div>
+
+
+    <div class="container-fluid">
+
+      <div class="container trans">
+        <h6>Permainan</h6>
+
+        <!--menu transaksi-->
+<div class="menu">
+  
+<a href="https://bejojoyo.bukaolshop.site/digital/149965">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghfMe6OPVTHpbzUNMqwg9KJlnNyWnn-MMUevCItWV4LDHjjzWDor9niZcY83NJYfEeFhq_3wKjxhVk38yTRy1DcAArWQjaN13cOCqVdZ7VPyYl5tJBVeG_NPM8LQwi56iBxPQWz5FwVGL0qmyzycYIRE0JR5j0oZODb7sBQn0yfaRBiSV4Qr27Jnnm/s320/ff.png" class="img-fluid">
+  <p>Free Fire</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/151015">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjNCWig6GfKTRRl-ZLIfKHDDSi08-qOR5BrBVopZhWx2t3SVax3vCtMpbSobclZnS0I3q1acrZmxdD4AwRBdllkMrpRhd7Ntcf7xGVQP29NJBbg5u2lxmw5W555WW1PNpSJbCTOOF7msnckH-4ZEOr49-MUS21IREw4t78auDjxZRSVytM7x7cmXy9N/s320/ml.png" class="img-fluid">
+  <p>Mobile Legend</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/150245">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhh60_43ayHt1G2BiBrKLZxsvlphroy5ogxSJOitys-vRH2kActlpBAmIuZ8WhwDAleskKTz_Bfpw2F6zR5g_EyKxnX3yK4Sc9P-u7tH1iytsJ1rbD6tVBqP-o4zE7sMU02ze7bRwk8qOGHcNlPEukC5y22q50_pPjK72HFDtxdQIdc4P9mjtjwoGyk/s320/pubg.png" class="img-fluid">
+  <p>PUBG</p>
+  </div>
+  </a>
+
+  <a href="https://bejojoyo.bukaolshop.site/digital/150442">
+  <div>
+  <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEguTbesfjctwqtDztKUXbRlKpidpGagOptYGURqjBWY0ZHXeF1-Ho8wMfe-KHnNIj3zPptWil7WYNGFXL9rXYLFYFCxNnsrxgOpFk-hCEKUYafiJBpsMEQdXTU1Du8ayZ9qDXpQSVG2YYJXiE_OYkjDs3Lg3nlaVVZkPN3Rh5qKSdYyZVciBG2pNkXQ/s320/aov.png" class="img-fluid">
+  <p>AOV</p>
+  </div>
+  </a>
+
+</div>
+<!--end menu transaksi-->
+      </div>
+      
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+    <script type="text/javascript">
+      const tanggalTujuan = new Date('Dec 31, 2022 07:49:00').getTime();
+
+      const hitungMundur = setInterval(function() {
+        const sekarang = new Date(). getTime();
+      const selisih = tanggalTujuan - sekarang;
+
+      const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+      const jam = Math.floor(selisih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+      const menit = Math.floor(selisih % (1000 * 60 * 60) / (1000 * 60));
+      const detik = Math.floor(selisih % (1000 * 60 ) / 1000);
+
+      const countdown = document.getElementById('countdown');
+      const thbaru = document.getElementById('thbaru');
+
+      // element card
+      const bHari = document.getElementById('bHari');
+      const bJam = document.getElementById('bJam');
+      const bMenit = document.getElementById('bMenit');
+      const bDetik = document.getElementById('bDetik');
+
+      // element card h1
+      const tHari = document.getElementById('tHari');
+      const tJam = document.getElementById('tJam');
+      const tMenit = document.getElementById('tMenit');
+      const tDetik = document.getElementById('tDetik');
+      
+      // element card p
+      const nhari = document.getElementById('nhari');
+      const njam = document.getElementById('njam');
+      const nmenit = document.getElementById('nmenit')
+      const ndetik = document.getElementById('ndetik');
+      
+      tHari.innerHTML = hari;
+      tJam.innerHTML = jam;
+      tMenit.innerHTML =  menit;
+      tDetik.innerHTML =  detik;
+
+     
+      if (selisih < 0) {
+        clearInterval(hitungMundur);
+        // box
+        bHari.classList.add('animate__animated', 'animate__flipInY', 'animate__repeat-3');
+        bJam.classList.add('animate__animated', 'animate__flipInY', 'animate__repeat-3');
+        bMenit.classList.add('animate__animated', 'animate__flipInY', 'animate__repeat-3');
+        bDetik.classList.add('animate__animated', 'animate__flipInY', 'animate__repeat-3');
+
+        thbaru.classList.add('animate__animated', 'animate__flipInY', 'animate__repeat-3');
+        thbaru.innerHTML = "Selamat tahun baru";
+    
+        tHari.innerHTML = "2";
+        tJam.innerHTML = "0";
+        tMenit.innerHTML =  "2";
+        tDetik.innerHTML =  "3";
+
+        nhari.style.display = "none";
+        njam.style.display = "none";
+        nmenit.style.display = "none";
+        ndetik.style.display = "none";
+
+      }
+      },1000);
+
+      function rubah(angka){
+        var reverse = angka.toString().split('').reverse().join(''),
+        ribuan = reverse.match(/\d{1,3}/g);
+        ribuan = ribuan.join('.').split('').reverse().join('');
+        return "Rp"+ribuan;
+      }
+      document.getElementById("saldo_user").innerText=rubah(document.getElementById("saldo_user").textContent);
+
+      function info() {
+        let info = document.getElementById('info');
+        swal("maaf, layanan ini masih dalam perbaikan.");
+      }
+      
+      
+
+
+    </script>
+
+  </body>
+</html>
